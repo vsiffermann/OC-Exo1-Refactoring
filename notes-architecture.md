@@ -47,42 +47,57 @@ Fort couplage composant ↔ données
 
 ## Schéma
 src/app/
-  ├── services/
-  │   └── olympic.service.ts (singleton)
-  │
-  ├── models/
-  │   ├── olympic.model.ts
-  │   └── participation.model.t
-  │
-  ├── components/
-  │   ├── header/
-  │   ├── chart/
-  │   ├── medal-chart/
-  │   ├── country-card/
-  │   ├── loader/
-  │   └── error-message/
-  │
+  ├── core/
+  │   ├── services/
+  │   │   └── olympic.service.ts (singleton)
+  │   ├── models/
+  │   │   ├── olympic.model.ts
+  │   │   └── participation.model.ts
+  │   ├── components/
+  │   │    ├── header/
+  │   │    │   ├── header.component.ts
+  │   │    │   ├── header.component.html
+  │   │    │   └── header.component.scss
+  │   │    ├── medal-chart/
+  │   │    │   ├── medal-chart.component.ts
+  │   │    │   ├── medal-chart.component.html
+  │   │    │   └── medal-chart.component.scss
+  │   │    └── country-chart/
+  │   │         ├── country-chart.component.ts
+  │   │         ├── country-chart.component.html
+  │   │         └── country-chart.component.scss
+  │   └── app.constants.ts
   ├── pages/
   │   ├── home/
   │   │   ├── home.component.ts
   │   │   ├── home.component.html
   │   │   └── home.component.scss
-  │   │
   │   ├── country/
   │   │   ├── country.component.ts
   │   │   ├── country.component.html
   │   │   └── country.component.scss
-  │   │
   │   └── not-found/
   │       ├── not-found.component.ts
   │       ├── not-found.component.html
   │       └── not-found.component.scss
-  │
   ├── app.component.ts
   ├── app.component.html
   └── app.component.scss
 
 ## Détail propositions d'amélioration :
+
+Centraliser la gestion des données dans olympic.service.ts :
+- une seule source d'appels HTTP
+- préparer l’intégration d’une API REST.
+
+Supprimer totalement les any et utiliser les interfaces définies dans models/
+
+Factoriser la gestion graphiques dans des composants (header, medal-chart, country-chart)
+
+Clarifier l'architecture :
+- pages/ → composants conteneurs
+- components/ → composants UI (idéalement réutilisables)
+- services/ → accès aux données
 
 ## Conclusion
 La nouvelle architecture introduit une séparation claire entre présentation, logique métier et accès aux données.
