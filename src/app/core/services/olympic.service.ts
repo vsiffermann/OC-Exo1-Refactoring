@@ -15,12 +15,6 @@ export class OlympicService {
     return this.http.get<Olympic[]>(this.apiUrl);
   }
 
-  getCountryById(id: number): Observable<Olympic | undefined> {
-    return this.getOlympics().pipe(
-      map(data => data.find(c => c.id === id))
-    );
-  }
-
   getCountryByName(countryName: string): Observable<Olympic | undefined> {
     return this.getOlympics().pipe(
       map(data => data.find(c => c.country === countryName))
