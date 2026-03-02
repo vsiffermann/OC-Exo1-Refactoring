@@ -10,6 +10,9 @@
         text-align: center;
         color: gray;
     }
+    canvas{
+        aspect-ratio: 2;
+    }
 }
 
 @media screen and (max-width: 1000px) {

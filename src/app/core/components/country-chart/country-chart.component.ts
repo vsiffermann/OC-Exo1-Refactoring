@@ -39,9 +39,6 @@ export class CountryChartComponent implements OnChanges, OnDestroy {
           label: 'Medals',
           data: this.medals
         }]
-      },
-      options: {
-        aspectRatio: 2.5
       }
     });
   }
