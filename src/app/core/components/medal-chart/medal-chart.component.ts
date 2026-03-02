@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import Chart from 'chart.js/auto';
+import { GRAPH_COLORS } from '../../app.constants';
 
 @Component({
   selector: 'app-medal-chart',
@@ -40,20 +41,17 @@ export class MedalChartComponent implements OnChanges, OnDestroy {
         labels: this.countries,
         datasets: [{
           label: 'Medals',
-          data: this.totals
+          data: this.totals,
+          backgroundColor: GRAPH_COLORS,
+          hoverOffset: 4
         }]
       },
       options: {
-        aspectRatio: 2.5,
+        responsive: true,
+        maintainAspectRatio: false,
         onClick: (event) => {
           if (event.native && this.pieChart) {
-            const points = this.pieChart.getElementsAtEventForMode(
-              event.native,
-              'nearest',
-              { intersect: true },
-              true
-            );
-
+            const points = this.pieChart.getElementsAtEventForMode(event.native, 'point', { intersect: true }, true);
             if (points.length) {
               const index = points[0].index;
               const country = this.countries[index];

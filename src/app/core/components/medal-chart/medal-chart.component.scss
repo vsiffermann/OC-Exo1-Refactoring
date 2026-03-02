@@ -1,0 +1,16 @@
+.wrapper-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  aspect-ratio: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}
