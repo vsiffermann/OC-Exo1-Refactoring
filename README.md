@@ -82,11 +82,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Screenshots
 
 ### Desktop Version
-![Dashboard Screenshot](screenshots\desktop-home.png)
-![Country Screenshot](screenshots\desktop-country.png)
-![Not Found Screenshot](screenshots\desktop-not-found.png)
+![Dashboard Screenshot](screenshots/desktop-home.png)
+![Country Screenshot](screenshots/desktop-country.png)
+![Not Found Screenshot](screenshots/desktop-not-found.png)
 
 ### Mobile Version
-![Dashboard Screenshot](screenshots\mobile-home.png)
-![Country Screenshot](screenshots\mobile-country.png)
-![Not Found Screenshot](screenshots\mobile-not-found.png)
+![Dashboard Screenshot](screenshots/mobile-home.png)
+![Country Screenshot](screenshots/mobile-country.png)
+![Not Found Screenshot](screenshots/mobile-not-found.png)
