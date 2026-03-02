@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit {
   constructor(private olympicService: OlympicService) {}
 
   ngOnInit(): void {
+    this.loadData();
+  }
+
+  private loadData(): void {
     this.olympicService.getOlympics().subscribe({
       next: (data: Olympic[]) => {
 

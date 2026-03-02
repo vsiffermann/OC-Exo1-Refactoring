@@ -26,6 +26,10 @@ export class CountryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.loadCountry();
+  }
+  
+  private loadCountry(): void {
 
     const countryName = this.route.snapshot.paramMap.get('countryName');
 
